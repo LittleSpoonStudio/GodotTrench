@@ -1,0 +1,61 @@
+[gd_resource type="ProjectCache" load_steps=5 format=3 uid="uid://dghpdl87hxki"]
+
+[sub_resource type="BankAsset" id="BankAsset_hxno7"]
+file_path = "res://FMODShadowProject/Build/Desktop/Master.bank"
+modified_time = 1705955615
+path = "bank:/Master"
+guid = "{69c470eb-e86b-41ed-8397-40eacb9efa36}"
+name = "Master"
+
+[sub_resource type="BankAsset" id="BankAsset_por1w"]
+file_path = "res://FMODShadowProject/Build/Desktop/Master.strings.bank"
+modified_time = 1705955615
+path = "bank:/Master.strings"
+guid = "{f1d9503f-9910-0daf-05de-ca143a6dfcae}"
+name = "Master.strings"
+
+[sub_resource type="BusAsset" id="BusAsset_18k3v"]
+path = "bus:/"
+guid = "{55d75ae3-53f7-41f1-a3f6-b3eb800aaaa4}"
+name = "Master"
+
+[sub_resource type="BusAsset" id="BusAsset_bjkb2"]
+path = "bus:/Reverb"
+guid = "{f45f3031-5669-4d36-beb8-6ec307b8b04b}"
+name = "Reverb"
+
+[resource]
+banks = {
+"{69c470eb-e86b-41ed-8397-40eacb9efa36}": SubResource("BankAsset_hxno7"),
+"{f1d9503f-9910-0daf-05de-ca143a6dfcae}": SubResource("BankAsset_por1w")
+}
+busses = {
+"{55d75ae3-53f7-41f1-a3f6-b3eb800aaaa4}": SubResource("BusAsset_18k3v"),
+"{f45f3031-5669-4d36-beb8-6ec307b8b04b}": SubResource("BusAsset_bjkb2")
+}
+bank_tree = [{
+"children": [],
+"item_type": 3,
+"node_name": "Master",
+"path": "bank:/Master",
+"resource": SubResource("BankAsset_hxno7")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "Master.strings",
+"path": "bank:/Master.strings",
+"resource": SubResource("BankAsset_por1w")
+}]
+bus_tree = [{
+"children": [{
+"children": [],
+"item_type": 4,
+"node_name": "Reverb",
+"path": "bus:/Reverb",
+"resource": SubResource("BusAsset_bjkb2")
+}],
+"item_type": 4,
+"node_name": "bus:",
+"path": "bus:/",
+"resource": SubResource("BusAsset_18k3v")
+}]

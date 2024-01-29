@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdiwbegl4q5j3"]
+
+[ext_resource type="Script" path="res://Scripts/Mob.cs" id="1_yxwn5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ry688"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r5mcm"]
+
+[node name="Mob" type="CharacterBody3D"]
+script = ExtResource("1_yxwn5")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot"]
+mesh = SubResource("BoxMesh_ry688")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_r5mcm")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]

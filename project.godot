@@ -11,13 +11,19 @@ config_version=5
 [application]
 
 config/name="Godot Trench"
-run/main_scene="res://test.tscn"
+run/main_scene="res://Scenes/StartingScreen.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 FMODRuntime="*res://addons/FMOD/runtime/fmod_runtime_manager.gd"
+
+[display]
+
+window/size/mode=3
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
 
 [dotnet]
 

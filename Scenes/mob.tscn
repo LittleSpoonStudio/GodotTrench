@@ -7,6 +7,8 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_r5mcm"]
 
 [node name="Mob" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_yxwn5")
 
 [node name="Pivot" type="Node3D" parent="."]

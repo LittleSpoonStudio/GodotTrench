@@ -7,6 +7,7 @@ public partial class player : CharacterBody3D
 	public int Speed { get; set; } = 14;
 	//how fast downwards in m/s^2
 	public int FallAcceleration { get; set; } = 75;
+	public int JumpImpulse { get; set; } = 20;
 
 	private Vector3 _targetVelocity = Vector3.Zero;
 
@@ -47,6 +48,11 @@ public partial class player : CharacterBody3D
 		if(!IsOnFloor())
 		{
 			_targetVelocity.Y -= FallAcceleration * (float)delta;
+		}
+		
+		if(IsOnFloor() && Input.IsActionPressed("jump"))
+		{
+			_targetVelocity.Y = JumpImpulse;
 		}
 
 		//Move the Character
